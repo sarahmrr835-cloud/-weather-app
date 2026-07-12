@@ -55,7 +55,18 @@ async function getWeather() {
     const temperature = weatherData.current_weather.temperature;
     const windSpeed = weatherData.current_weather.windspeed;
     const weatherCode = weatherData.current_weather.weathercode;
-    const [weatherCondition, weatherImage] = weatherCodeMap[weatherCode];
+    let iconCode = "01d"; // Default icon code
+    if (weatherCode === 1 || weatherCode === 2) iconCode = "02d";
+    else if (weatherCode === 3) iconCode = "03d";
+    else if (weatherCode >= 45 && weatherCode <= 48) iconCode = "50d";
+    else if (weatherCode >= 51 && weatherCode <= 67) iconCode = "10d";
+    else if (weatherCode >= 71 && weatherCode <= 77) iconCode = "13d";
+    else if (weatherCode >= 80 && weatherCode <= 82) iconCode = "09d";
+    else if (weatherCode >= 95 && weatherCode <= 99) iconCode = "11d";
+
+    const weatherCondition = (weatherCodeMap[weatherCode] || ["Unknown"])[0];
+
+    document.getElementById("weather-image").src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
     if (country && city != country) {
         document.getElementById("city").innerText = `${city}, ${country}`;
@@ -63,8 +74,7 @@ async function getWeather() {
     else {
         document.getElementById("city").innerText = `${city}`;
     }
-    document.getElementById("weather-logo").src = weatherImage;
     document.getElementById("temperature").innerText = temperature;
-    document.getElementById("weather-condition").innerText = weatherCondition
+    document.getElementById("weather-condition").innerText = weatherCondition;
     document.getElementById("wind-speed").innerText = windSpeed;
 }
