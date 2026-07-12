@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, turquoise, lavender);
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #7ab3e4, #4c8291);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +19,7 @@ body {
 #city-input {
     padding: 10px;
     width: 200px;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(246, 203, 203);
     border-radius: 5px;
 }
 
@@ -29,4 +29,10 @@ body {
     background-color: lightblue;
     color: white;
     border-radius: 5px;
+}
+
+#weather-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
 }

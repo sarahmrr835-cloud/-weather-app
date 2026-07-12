@@ -63,7 +63,7 @@ async function getWeather() {
     else {
         document.getElementById("city").innerText = `${city}`;
     }
-    document.getElementById("weather-image").src = weatherImage;
+    document.getElementById("weather-logo").src = weatherImage;
     document.getElementById("temperature").innerText = temperature;
     document.getElementById("weather-condition").innerText = weatherCondition
     document.getElementById("wind-speed").innerText = windSpeed;
