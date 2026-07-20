@@ -25,13 +25,6 @@ A responsive weather application that provides real-time weather information for
 - Error handling
 - Clean UI
 
----
-
-## 📷 Screenshots
-
-![Home](screenshots/home.png)
-
-![Search](screenshots/search.png)
 
 ---
 
