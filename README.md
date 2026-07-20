@@ -33,7 +33,7 @@ A responsive weather application that provides real-time weather information for
 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/weather-app.git
+git clone https://github.com/sarahmrr835-cloud/-weather-app.git
 ```
 
 2. Open the project folder.
